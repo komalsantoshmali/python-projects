@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis App</title>
+</head>
+<body>
+    <h2>Sentiment Analysis using TextBlob</h2>
+
+    <form method="POST">
+        <textarea name="text" rows="5" cols="50" required></textarea><br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if sentiment %}
+        <h3>Result:</h3>
+        <p><b>Sentiment:</b> {{ sentiment }}</p>
+        <p><b>Polarity:</b> {{ polarity }}</p>
+        <p><b>Subjectivity:</b> {{ subjectivity }}</p>
+    {% endif %}
+</body>
+</html>
